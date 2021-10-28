@@ -1,3 +1,29 @@
+
+# Recursion
+
+# Product of first N natural numbers
+
+# def prod(N):
+
+#     if N == 1:
+#         return 1
+#     smallRes = prod(N-1)
+#     finalRes = smallRes*N
+
+#     return finalRes
+
+# print(prod(6))
+
+# Sum of all array elements using recursion
+
+# def arraySum(A, n):
+
+#     # Base case
+#     if n==1:
+#         return A[n-1]
+
+#     return arraySum(A,n-1) + A[n-1]
+
 # Reverse string recursively
 
 # def revString(s):
