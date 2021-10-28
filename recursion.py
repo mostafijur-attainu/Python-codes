@@ -79,3 +79,25 @@
 
 # n = int(input())
 # print(Nthstair(0,n))
+
+# binary search using recursion
+
+# def binarySearch(arr, st, en, k):
+    
+#     if st>en:
+#         return -1
+
+#     mid = (st+en)//2
+    
+#     if arr[mid] == k :
+#         return mid
+    
+#     if arr[mid] > k:
+#         return binarySearch(arr,st,mid-1,k)
+    
+#     if arr[mid] < k:
+#         return binarySearch(arr,mid+1,en,k)
+
+# arr = [1, 5, 6, 7, 8, 9, 10, 15]
+
+# print(binarySearch(arr,0,7,15))
