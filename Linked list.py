@@ -111,4 +111,72 @@ class Node:
 #     print(Temp.Data, end = " ")
 #     Temp = Temp.Next
 # print()
+# Reverse a linked list
 
+# Node1 =  Node(1)
+# Node2 =  Node(6)
+# Node3 =  Node(5)
+# Node4 =  Node(2)
+
+# Node1.Next = Node2
+# Node2.Next = Node3
+# Node3.Next = Node4
+
+# Head = Node1
+# Temp = Head
+# while Temp != None:
+#     print(Temp.Data, end = " ")
+#     Temp = Temp.Next
+# print()
+
+# CURR = Node1
+# PREV = None
+
+# while CURR != None:
+
+#     NEXT = CURR.Next
+#     CURR.Next = PREV
+#     PREV = CURR
+#     CURR = NEXT
+
+# Temp = PREV
+# while Temp != None:
+#     print(Temp.Data, end = " ")
+#     Temp = Temp.Next
+# print()
+
+# Linked list cycle 
+
+Node1 =  Node(1)
+Node2 =  Node(6)
+Node3 =  Node(5)
+Node4 =  Node(2)
+
+Node1.Next = Node2
+Node2.Next = Node3
+Node3.Next = Node4
+Node4.Next = Node2
+
+Head = Node1
+Temp = Head
+
+dic = {}
+ans = False
+
+while Temp != None:
+
+    if Temp not in dic :
+        dic[Temp] = 1
+    
+    else:
+        dic[Temp] += 1
+    
+    print(Temp, Temp.Data)
+    if dic[Temp] > 1:
+        ans = True
+        break
+    
+    Temp = Temp.Next
+
+print(dic)
+print(ans)
