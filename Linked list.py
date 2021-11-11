@@ -180,3 +180,37 @@ while Temp != None:
 
 print(dic)
 print(ans)
+
+
+# Linked list cycle - Fast and slow pointer
+
+# Node1 =  Node(1)
+# Node2 =  Node(6)
+# Node3 =  Node(5)
+# Node4 =  Node(2)
+# Node5 =  Node(7)
+
+# Node1.Next = Node2
+# Node2.Next = Node3
+# Node3.Next = Node4
+# Node4.Next = Node5
+# Node5.Next = Node1
+
+# Head = Node1
+
+# if Head  = None :
+#     print(False)
+# else:
+#     slow = Head
+#     fast = Head.Next
+
+#     ans = False
+
+#     while slow.Next != None and fast.Next != None and fast.Next.Next != None and slow != fast :
+#         slow = slow.Next
+#         fast = fast.Next.Next
+
+#     if slow == fast:
+#         ans = True
+
+# print(ans)
