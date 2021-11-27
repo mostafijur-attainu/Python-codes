@@ -17,7 +17,49 @@ def inOrder(root):
     inOrder(root.left)
     print(root.Data)
     inOrder(root.right)
+    
+# Count total nodes
+def TotalNodes(root):
 
+    if root == None :
+        return 0
+    
+    nodesL = TotalNodes(root.left)
+    nodesR = TotalNodes(root.right)
+
+    return nodesL + nodesR + 1
+
+# Count height
+def height(root):
+
+    if root == None :
+        return 0
+    
+    if root.left == None and root.right == None :
+        return 0
+
+    heightL = height(root.left)
+    heightR = height(root.right)
+
+    return max(heightL,heightR) + 1
+
+# Left view
+dic = {}
+L = 1
+def LeftView(root):
+    global L
+
+    if root == None :
+        return
+
+    if L not in dic :
+        print(root.Data)
+        dic[L] = 1
+        
+    L += 1
+    LeftView(root.left)
+    LeftView(root.right)
+    L -= 1
 class Node :
 
     def __init__(self, data):
