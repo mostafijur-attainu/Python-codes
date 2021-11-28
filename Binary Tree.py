@@ -18,6 +18,20 @@ def inOrder(root):
     print(root.Data)
     inOrder(root.right)
     
+def checkBST(root):
+    L = []
+    inOrder(root, L)
+
+    f = True 
+    for i in range(1,len(L)):
+        if L[i] <= L[i-1]:
+            f = False
+            break
+    
+    return f
+
+    print(L)
+
 # Count total nodes
 def TotalNodes(root):
 
